@@ -12,11 +12,11 @@ export class InfoPaginaService {
   equipo: any[] = [];
 
   constructor( private http: HttpClient) {
-    this.cargarIngo();
+    this.cargarInfo();
     this.cargarEquipo();
   }
 
-  private cargarIngo() {
+  private cargarInfo() {
     // Leer el archivo JSON para leer sus propiedades
     this.http.get('assets/data/data-pagina.json')
       .subscribe( (resp: InfoPagina) => {
